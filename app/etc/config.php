@@ -143,6 +143,8 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Oggetto_Promo' => 1,
+        'Oggetto_Study' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1
     ]
