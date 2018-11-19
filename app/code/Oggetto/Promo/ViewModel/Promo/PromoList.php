@@ -11,7 +11,7 @@ class PromoList implements ArgumentInterface
         return [
             'TODAY 30% off for t-shirts',
             'Tomorrow 20% off for hats',
-            'BUY 3 things – 1 for free'
+            'BUY 3 things – 1 for free',
         ];
     }
 }

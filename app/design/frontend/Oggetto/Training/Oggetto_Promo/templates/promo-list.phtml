@@ -1,0 +1,16 @@
+<?php
+/** @var \Oggetto\Promo\ViewModel\Promo\PromoList $viewModel */
+/** @var \Magento\Framework\View\Element\Template $block */
+$viewModel = $block->getViewModel();
+?>
+<style>
+    li:target {
+        background: #faa;
+    }
+</style>
+<ul>
+    <?php foreach($viewModel->getPromotions() as $id => $label): ?>
+        <li id="promo<?= $id ?>"><?= $block->escapeHtml($label)?></li>
+    <?php endforeach; ?>
+</ul>
+<?= $block->getChildHtml('promo-cms-block') ?>

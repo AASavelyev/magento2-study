@@ -1,0 +1,12 @@
+<?php
+/** var Oggetto\Promo\ViewModel\Cart\Item\Promo $viewModel */
+/** @var Magento\Checkout\Block\Cart\Item\Renderer $block*/
+
+$viewModel = $block->getViewModel();
+$_item     = $block->getParentBlock()->getItem();
+$product   = $_item->getProduct();
+?>
+<td class="col promo">
+    <?php $promoId = $viewModel->getPromoId($product)?>
+    <a href="<?= $block->getUrl('promo/available', ['_fragment' => 'promo' . $promoId]) ?>">Promo</a>
+</td>
