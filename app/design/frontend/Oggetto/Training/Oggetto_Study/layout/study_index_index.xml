@@ -2,4 +2,31 @@
 <page layout="study"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="template.name.in.layout" template="Oggetto_Study::template/layout.phtml"/>
+            <block name="template.name.action">
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Oggetto_Study::template/action.phtml</argument>
+                </action>
+            </block>
+            <block name="template.name.arguments">
+                <arguments>
+                    <argument name="template" xsi:type="string">Oggetto_Study::template/arguments.phtml</argument>
+                </arguments>
+            </block>
+            <block class="Oggetto\Study\Block\Backend" name="template.name.in.backend"/>
+            <block name="using.etc.view.vars" template="Oggetto_Study::vars/etc_view.phtml"/>
+            <block name="using.vars.from.layout" template="Oggetto_Study::vars/layout.phtml">
+                <block name="child" template="Oggetto_Study::vars/layout/child.phtml">
+                    <arguments>
+                        <argument name="view_model" xsi:type="object">Oggetto\Study\ViewModel\Script</argument>
+                    </arguments>
+                </block>
+                <arguments>
+                    <argument name="layout_var" xsi:type="string">Layout vars</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
 </page>

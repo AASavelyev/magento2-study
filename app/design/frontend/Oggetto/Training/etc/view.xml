@@ -18,4 +18,7 @@
             </image>
         </images>
     </media>
+    <vars module="Oggetto_Study">
+        <var name="test_data">Test data</var>
+    </vars>
 </view>
